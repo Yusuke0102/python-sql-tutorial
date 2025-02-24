@@ -1,5 +1,7 @@
 # 🛑 仮想環境（venv）はGitに含めない
 myvenv/
+venv/
+env/
 
 # 🛑 Pythonのキャッシュファイル
 __pycache__/
