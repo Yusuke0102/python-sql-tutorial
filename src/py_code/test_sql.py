@@ -1,7 +1,14 @@
+import os
 import sqlite3
 
+db_dir = "/home/lunat/python-sql-tutorial/src/db"  # ✅ 任意のディレクトリに変更
+os.makedirs(db_dir, exist_ok=True)  # ✅ ディレクトリがなければ作成
+
+# ✅ データベースファイルのパスを変更
+db_path = os.path.join(db_dir, "example.db")
+
 # データベース接続（ファイルがなければ新規作成）
-conn = sqlite3.connect("example.db")
+conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
 # テーブル作成
